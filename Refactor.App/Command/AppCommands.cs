@@ -28,7 +28,7 @@ public class AppCommands
         lines.Insert(lineIndex, "\t}");
         lines.Insert(lineIndex, "\t\t" + methodBody.Trim());
         lines.Insert(lineIndex, "\t{");
-        lines.Insert(lineIndex, methodName);
+        lines.Insert(lineIndex, $"{methodName}()");
         await File.WriteAllLinesAsync(model.FilePath, lines);
     }
 }
